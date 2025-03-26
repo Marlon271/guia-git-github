@@ -1,180 +1,266 @@
-# guia-git-github
+# Guía Completa de Git y GitHub
 
-## Tabla de contenido 
+Este repositorio contiene una guía ilustrada (con capturas de pantalla) para aprender los pasos básicos de Git y su integración con GitHub. Cada sección incluye explicaciones y referencias a imágenes (almacenadas en la carpeta `imagenes`), con la intención de cubrir por completo la estructura de la actividad propuesta.
 
-1. [Introducción a Git y GitHub](#Introducción-a-Git-y-GitHub)
+## Tabla de Contenido
+- [1. ¿Qué es Git y para qué sirve?](#1-¿qué-es-git-y-para-qué-sirve)
+- [2. ¿Qué es GitHub y por qué usarlo?](#2-¿qué-es-github-y-por-qué-usarlo)
+- [3. Creación de cuenta en GitHub](#3-creación-de-cuenta-en-github)
+- [4. Instalación de Git](#4-instalación-de-git)
+- [5. Configuración inicial de Git](#5-configuración-inicial-de-git)
+- [6. Creación de un repositorio en GitHub](#6-creación-de-un-repositorio-en-github)
+- [7. Apertura del proyecto en Visual Studio Code (opcional)](#7-apertura-del-proyecto-en-visual-studio-code-opcional)
+- [8. Creación de un Repositorio Local](#8-creación-de-un-repositorio-local)
+- [9. Creación y primer commit del `README.md`](#9-creación-y-primer-commit-del-readmemd)
+- [10. Creación de la carpeta `imagenes` y adición de recursos](#10-creación-de-la-carpeta-imagenes-y-adición-de-recursos)
+- [11. Trabajo con Ramas (Branching)](#11-trabajo-con-ramas-branching)
+  - [11.1 Creación y cambio a una nueva rama](#111-creación-y-cambio-a-una-nueva-rama)
+  - [11.2 Realizar cambios y confirmarlos](#112-realizar-cambios-y-confirmarlos)
+  - [11.3 Fusión de ramas (Merge)](#113-fusión-de-ramas-merge)
+- [12. Vincular el repositorio local con GitHub y hacer `push`](#12-vincular-el-repositorio-local-con-github-y-hacer-push)
+- [13. Colaboración y Pull Requests](#13-colaboración-y-pull-requests)
+  - [13.1 Fork de un repositorio existente](#131-fork-de-un-repositorio-existente)
+  - [13.2 Clonar el repositorio forkeado](#132-clonar-el-repositorio-forkeado)
+  - [13.3 Crear una rama, hacer cambios y abrir un Pull Request](#133-crear-una-rama-hacer-cambios-y-abrir-un-pull-request)
+- [Contribuciones](#contribuciones)
+- [Recursos Adicionales](#recursos-adicionales)
+- [Licencia](#licencia)
 
-    - [Git](#git)  
-    - [Git](#github)  
-2. [Configuración del Entorno](#configuración-del-entorno)
+---
 
-    - [Creación de una cuenta en GitHub](#creación-de-una-cuenta-en-github)   
-    - [Instalación de Git](#instalación-de-git)  
-    - [Configuración Inicial de Git](#configuración-inicial-de-git)
+## 1. ¿Qué es Git y para qué sirve?
 
-3. [Creación y Manejo de un Repositorio](#creación-y-manejo-de-un-repositorio)
+**Git** es un sistema de control de versiones distribuido que permite a varios desarrolladores trabajar sobre un mismo proyecto sin pisarse los cambios. Con Git, puedes mantener un historial completo de modificaciones, volver a versiones anteriores y fusionar ramas de desarrollo de manera eficiente.
 
-    - [inicializar un nuevo repositorio](#inicializar-un-nuevo-repositorio)   
-    - [Seguimiento de archivos](#seguimiento-de-archivos)  
+---
 
-4. [Trabajo con Ramas](#trabajo-con-ramas)
+## 2. ¿Qué es GitHub y por qué usarlo?
 
-    - [Creación de una nueva rama](#creación-de-una-nueva-rama)  
-    - [Fusión de ramas](#fusión-de-ramas)
+**GitHub** es una plataforma online que aloja repositorios de Git. Ofrece herramientas de colaboración como Pull Requests, gestión de incidencias (Issues) y visibilidad pública o privada de tus proyectos. Es uno de los espacios más populares para compartir y colaborar en proyectos de software de todo tipo y tamaño.
 
-5. [Publicación en GitHub](#publicación-en-github)
+---
 
-6. [Colaboración y Pull Requests](#colaboración-y-pull-requests)
-    -[Fork de un repositorio existente](#fork-de-un-repositorio-existente)   
-    -[Clonar el repositorio forkeado](#clonar-el-repositorio-forkeado)  
-    -[Realizar cambios y enviar un Pull Request](#realizar-cambios-y-enviar-un-pull-request)
+## 3. Creación de cuenta en GitHub
 
-## Introducción a Git y 
+1. Ingresa a [github.com](https://github.com/) y haz clic en **Sign up** (o **Regístrate**).  
+   ![Creación de cuenta en GitHub](imagenes/1.jpg)
 
-#### Git:
- es un sistema de control de versiones distribuido que permite gestionar los cambios en el código a lo largo del tiempo. Fue diseñado para que varios desarrolladores puedan trabajar en el mismo proyecto sin pisarse entre sí. Cada desarrollador tiene una copia completa del historial del proyecto, lo que facilita el trabajo en paralelo, la detección de errores y la recuperación de versiones anteriores si algo sale mal.
+2. Completa el formulario con tus datos (nombre de usuario, correo electrónico y contraseña).  
+   ![Formulario de registro](imagenes/2.jpg)
 
-#### GitHub:
- por su parte, es una plataforma en línea donde se pueden alojar repositorios Git. Su principal valor está en facilitar la colaboración: permite compartir proyectos, revisar código, gestionar problemas (issues), y trabajar en equipo mediante funciones como pull requests. Es especialmente importante en proyectos de código abierto, donde desarrolladores de todo el mundo pueden contribuir de forma organizada y transparente.
+3. Verifica tu correo si así lo requiere GitHub.
 
-## Configuración del Entorno
+4. Una vez creada tu cuenta, podrás iniciar sesión.  
+   ![Pantalla final de registro](imagenes/3.jpg)
 
-#### Creación de una cuenta en GitHub:
+---
 
-ingresar a [git](https://github.com/) 
-![git](imagenes/1.jpg)
+## 4. Instalación de Git
 
-ingresar a suscribirce, ingresar un correo y poner una clave. 
-![git](imagenes/2.jpg)
+Con tu cuenta de GitHub lista, necesitas **Git** instalado en tu computadora:
 
+- **Windows / macOS**:  
+  Descarga el instalador desde [git-scm.com](https://git-scm.com/) y sigue las instrucciones.
+- **Linux (Ubuntu)**:
+  ```bash
+  sudo apt update
+  sudo apt install git
+  ```
 
-ingresar a iniciar sesión, introducir la cuenta creada. 
-![git](imagenes/3.jpg)
-
-#### Instalación de Git:
-
-ingresar a [git.download](https://git-scm.com/) para windows
-![git](imagenes/4.jpg)
-descargarlo e instalarlo, la instalación es sencilla, solo toca undirle a todo siguiente y listo.
-
-#### Configuración Inicial de Git:
-
-1. primero debemos crear un repositorio en nuestra cuenta.
-![git](imagenes/5.jpg)
-tener en cuenta ponerlo en publico para que las demas personas puedan ingresar sin niguna dificultad, ademas tambien hay que tener en cuenta chuliar la opcion de add a README file si queremos que desde un inicio tengamos un archivo md.
-
-2. para ingresar o habrir este rapositorio debemos abrir vscode e ingresar los siguientes comandos.
- ![git](imagenes/6.jpg)
- ```
- git config --global user.name "Tu Nombre"
- git config --global user.email "tuemail@example.com"
- ```
-
-## Creación y Manejo de un Repositorio:
-
-#### inicializar un nuevo repositorio:
-
-para iniciar un repocitoria hay varias maneras por ej. utilizando la terminal de vscode e ingresando el comando de git init para crear un repositorio desde cero pero para mi se me hace que es una manera muy extenza porque hay que ingresar varios comandos. 
-
-la mejor manera para realizarlo y si contamos con conectividad a internet seria de esta manera.
-- tenemos que tener en nuestra cuenta un repositorio, abrir vscode y ingresar a clone git repository por ultimo seleccionar el repositorio que desemos clonar.
-![git](imagenes/7.jpg)
-
-#### Seguimiento de archivos:
-
-1. Creacion ce archivo README.md con una breve descripción del proyecto:
-
-si realizan el repositorio como se indica en esta guia ya esta creado el md pero si lo desean crear es de la siguiente manera.
-![git](imagenes/8.jpg)
-con el comando echo "#  comentario que aparece en el md" > README.md  
-
-2. Agregar un archivo al área:
-
-con el comando
-``` 
- git add README.md y git add imagenes
+Para verificar la instalación, en la terminal ejecuta:
+```bash
+git --version
 ```
-este comando lo añade al staging area, es decir, lo prepara para ser guardado en el repositorio en el siguiente commit.
+![Instalación de Git](imagenes/4.jpg)
 
-3. Realizar un commit:
+---
 
-- Guardar los cambios en el historial del repositorio:
+## 5. Configuración inicial de Git
 
-primero hay que agregar los archivos que tengamos con el anterior comando
-``` 
- git commit -m "Agregar archivo README y imagenes"
+Para que Git asocie tus commits a tu identidad:
+
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@example.com"
 ```
-![git](imagenes/9.jpg)
-si depronto no se guarda la informacion o no aparece en el git ingresar este comando
+Asegúrate de usar el mismo correo que registraste en GitHub.  
+![Configuración inicial de Git](imagenes/8.png)
+
+---
+
+## 6. Creación de un repositorio en GitHub
+
+1. Inicia sesión en GitHub y haz clic en el botón **New** (o **Nuevo repositorio**).  
+   ![Crear repositorio desde GitHub](imagenes/5.png)
+
+2. Asigna un nombre a tu repositorio, por ejemplo `Guia_Git_y_Github`, y elige si lo quieres **público** o **privado**.  
+   ![Configurando el repositorio](imagenes/repositorio.jpg)
+
+3. Haz clic en **Create repository**.  
+   *(De momento, no agregues ningún README para practicar la subida desde local.)*
+
+---
+
+## 7. Apertura del proyecto en Visual Studio Code (opcional)
+
+1. Ubica tu carpeta de proyecto y, en la barra de direcciones (Windows), escribe `cmd` para abrir la terminal.  
+   ![Abrir cmd](imagenes/6.png)
+
+2. Ejecuta:
+   ```bash
+   code .
+   ```
+   Esto abrirá VS Code en la carpeta actual.  
+   ![Abrir Visual Studio Code](imagenes/7.png)
+
+3. Revisa que aparezca la interfaz de VS Code con los archivos de tu carpeta.  
+   ![Interfaz de Visual Studio Code](imagenes/9.png)
+
+---
+
+## 8. Creación de un Repositorio Local
+
+1. Elige o crea una carpeta donde estará tu proyecto.
+2. Abre la terminal en esa carpeta y ejecuta:
+   ```bash
+   git init
+   ```
+   Esto creará la carpeta oculta `.git`, donde Git almacenará todo el historial de versiones.
+
+---
+
+## 9. Creación y primer commit del `README.md`
+
+1. Crea un archivo `README.md` con la descripción o propósito de tu proyecto.  
+2. Agrega y confirma los cambios:
+   ```bash
+   git add README.md
+   git commit -m "Primer commit: agrega README"
+   ```
+   ![Primer commit del README](imagenes/10.png)
+
+---
+
+## 10. Creación de la carpeta `imagenes` y adición de recursos
+
+Para mantener capturas de pantalla u otros recursos gráficos:
+
+1. Crea la carpeta:
+   ```bash
+   mkdir imagenes
+   ```
+   ![Carpeta de imágenes en el repositorio](imagenes/11.png)
+
+2. Añade la carpeta y sus contenidos a Git:
+   ```bash
+   git add imagenes
+   git commit -m "Agregar carpeta imagenes con capturas"
+   ```
+   ![Añadir imágenes al repositorio](imagenes/12.png)
+
+---
+
+## 11. Trabajo con Ramas (Branching)
+
+### 11.1 Creación y cambio a una nueva rama
+Para evitar romper la rama principal (`main`), se suele crear una rama para desarrollo:
+```bash
+git checkout -b desarrollo
 ```
- git git push
- ```
-![git](imagenes/10.jpg)
-otra manera para hacerlo es ingresar a source control y en la parte de changes undirle en el +, en la casilla de arriba ingresar
-```  
-feat: cualquier comentario
-```
-luego en commint y luego en sync changes.
+Esto crea y cambia automáticamente a la nueva rama llamada `desarrollo`.
 
-![git](imagenes/11.jpg)
-![git](imagenes/12.jpg)
+### 11.2 Realizar cambios y confirmarlos
+1. Modifica el `README.md` o agrega nuevos archivos.  
+2. Haz `git add .` para incluir todos los cambios en el área de preparación.  
+3. Confirma:
+   ```bash
+   git commit -m "Cambios en la rama desarrollo"
+   ```
 
+### 11.3 Fusión de ramas (Merge)
+1. Regresa a la rama principal:
+   ```bash
+   git checkout main
+   ```
+2. Fusiona la rama `desarrollo` en `main`:
+   ```bash
+   git merge desarrollo
+   ```
+3. Si no hay conflictos, se completará exitosamente la fusión.  
+4. Para borrar la rama ya fusionada (opcional):
+   ```bash
+   git branch -d desarrollo
+   ```
 
-#### Trabajo con Ramas
+---
 
-## Creación de una nueva rama:
-con el comando 
-```
-git checkout -b desarrollo 
-```
-creamos una nueva rama  que es como una línea paralela de desarrollo dentro de tu proyecto. Lo que permite trabajar en cambios sin afectar directamente el proyecto principal.
+## 12. Vincular el repositorio local con GitHub y hacer `push`
 
-## Fusión de ramas:
-tener en cuenta que cuando estemos en una rama no se podra guardar la informacion hasta que unamos las ramas con el comando 
-```
-git merge desarrollo
-```
-y hay si podemos guardar la información ademas cuando estemos en una rama las demas personas que estan en la rama principal o en otra no podran visializar lo que estomos haciendo.
+1. En tu proyecto local, agrega la URL de tu nuevo repositorio remoto:
+   ```bash
+   git remote add origin https://github.com/TU_USUARIO/Guia_Git_y_Github.git
+   ```
+2. Empuja (push) los cambios de tu rama principal:
+   ```bash
+   git push -u origin main
+   ```
+3. Verifica en GitHub que se hayan subido correctamente los archivos y commits.
 
+   ![Cambios en el repositorio local](imagenes/13.png)
+   ![Cambios confirmados en GitHub](imagenes/14.png)
 
-![git](imagenes/13.jpg)
+---
 
+## 13. Colaboración y Pull Requests
 
-#### Publicación en GitHub:
+Cuando se trabaja en equipo o se quiere contribuir a un proyecto ajeno, el flujo generalmente consiste en **Fork**, **clonación** y la creación de un **Pull Request** para proponer cambios.
 
-- Vincular el repositorio local con GitHub:
-para vincular el repositorio se suguiere que solo sea en los casos en el cual uno aga un repositorio desde cero.
-con el siguiente comando en la terminal se podra vincular 
-```
-git remote add origin https://github.com/tuusuario/tu-repositorio.git
-```
+### 13.1 Fork de un repositorio existente
+1. En GitHub, visita el repositorio que deseas modificar.  
+2. Haz clic en **Fork** para crear tu propia copia en tu cuenta.  
+3. Esto genera un repositorio forkeado bajo tu usuario.
 
-#### Colaboración y Pull Requests:
+### 13.2 Clonar el repositorio forkeado
+1. Desde tu repo forkeado, copia la URL (HTTPS o SSH).  
+2. En tu local, ejecuta:
+   ```bash
+   git clone https://github.com/TU_USUARIO/repositorio-forkeado.git
+   ```
+3. Entra a la carpeta clonada con:
+   ```bash
+   cd repositorio-forkeado
+   ```
 
-## Fork de un repositorio existente:
-- que es:
-Un fork es una copia de un repositorio que se hace en tu propia cuenta de GitHub. Es como clonar el proyecto de alguien más, pero dentro de tu espacio, para que puedas trabajar libremente sin afectar el original.
+### 13.3 Crear una rama, hacer cambios y abrir un Pull Request
+1. Crea una rama:
+   ```bash
+   git checkout -b mi-rama-de-cambios
+   ```
+2. Realiza las modificaciones en el código o documentación.
+3. Haz commit y push de la rama:
+   ```bash
+   git add .
+   git commit -m "Añade o corrige algo"
+   git push origin mi-rama-de-cambios
+   ```
+4. En GitHub, verás la opción de crear un **Pull Request** desde tu rama hacia la rama principal (por ejemplo, `main`) del repositorio original.
+5. Espera a que el mantenedor revise e integre (mergee) tus cambios.
 
-para hacer el Fork hay que ingresar a un repositorio de alguien y entrar a la opcion de fork y lo creamos
+---
 
-![git](imagenes/14.jpg)
+## Contribuciones
 
+Si alguien desea contribuir a esta guía:
+1. Hacer un **Fork** de este repositorio.  
+2. Clonar el fork en su máquina local.  
+3. Crear una rama nueva para sus cambios.  
+4. Subir esa rama a su propio fork y abrir un **Pull Request** hacia este repositorio.
 
-## Clonar el repositorio forkeado:
-cuando ya tengamos clonado el repositorio atravez del Fork ingresar a la terminal e ingresar este comando 
-```
-git clone "://github.com/tu-usuario/reposotio a clonar 
-```
-![git](imagenes/15.jpg)
+---
 
-## Realizar cambios y enviar un Pull Request:
+## Recursos Adicionales
 
-- Crear una nueva rama, realizar modificaciones, confirmar los cambios y subir la rama al repositorio remoto:
+- [Documentación oficial de Git](https://git-scm.com/doc)  
+- [Guía de Git y GitHub para principiantes (freeCodeCamp, español)](https://www.freecodecamp.org/espanol/news/guia-para-principiantes-de-git-y-github/)
 
-![git](imagenes/16.jpg)
-
-ingresar al git e ingresar a compare & pull request 
-
-![git](imagenes/17.jpg)
-![git](imagenes/18.jpg)
-![git](imagenes/19.jpg)
+---
